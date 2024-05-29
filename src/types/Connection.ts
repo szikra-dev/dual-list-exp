@@ -50,56 +50,145 @@ export const availableSalesRepresentatives: SalesRepresentative[] = [
   { id: '5', name: 'Charlie' },
 ]
 
-// func to get random number from 0 to 4 (inclusive)
-// const getRandomNumber = () => Math.floor(Math.random() * 5)
-
-// create a list of connections, length 4 with random data given the available groups, price types, and sales representatives
-// const connectionsGetter: Connection[] = Array.from(
-//   { length: 4 },
-//   (_, index) => ({
-//     id: index.toString(),
-//     name: `Connection ${index + 1}`,
-//     groupIds: Array.from(
-//       { length: getRandomNumber() },
-//       () => availableGroups[getRandomNumber()].id,
-//     ),
-//     priceTypeIds: Array.from(
-//       { length: getRandomNumber() },
-//       () => availablePriceTypes[getRandomNumber()].id,
-//     ),
-//     salesRepresentativeIds: Array.from(
-//       { length: getRandomNumber() },
-//       () => availableSalesRepresentatives[getRandomNumber()].id,
-//     ),
-//   }),
-// )
-
 export const connections = [
   {
     id: '0',
+    name: 'The Enchanted Emporium',
     groupIds: ['2', '3', '4'],
     priceTypeIds: ['2', '3'],
     salesRepresentativeIds: ['5', '4', '1'],
   },
   {
     id: '1',
-    name: 'Connection 2',
+    name: 'Mystic Meadows',
     groupIds: ['5'],
     priceTypeIds: ['2', '1'],
     salesRepresentativeIds: ['3', '2', '5'],
   },
   {
     id: '2',
-    name: 'Connection 3',
+    name: 'Stellar Supplies',
     groupIds: ['3', '2'],
     priceTypeIds: ['3'],
     salesRepresentativeIds: ['2', '5'],
   },
   {
     id: '3',
-    name: 'Connection 4',
+    name: 'Twilight Treasures',
     groupIds: ['3'],
     priceTypeIds: ['4', '3'],
     salesRepresentativeIds: ['4'],
+  },
+  {
+    id: '4',
+    name: 'Urban Oasis Outlet',
+    groupIds: ['1'],
+    priceTypeIds: ['1'],
+    salesRepresentativeIds: ['1'],
+  },
+  {
+    id: '5',
+    name: 'Whimsy Warehouse',
+    groupIds: ['2'],
+    priceTypeIds: ['2'],
+    salesRepresentativeIds: ['2'],
+  },
+  {
+    id: '6',
+    name: 'Crescent Corner',
+    groupIds: ['3'],
+    priceTypeIds: ['3'],
+    salesRepresentativeIds: ['3'],
+  },
+  {
+    id: '7',
+    name: 'The Curious Cabinet',
+    groupIds: ['4'],
+    priceTypeIds: ['4'],
+    salesRepresentativeIds: ['4'],
+  },
+  {
+    id: '8',
+    name: 'Serenity Shoppe',
+    groupIds: ['5'],
+    priceTypeIds: ['5'],
+    salesRepresentativeIds: ['5'],
+  },
+  {
+    id: '9',
+    name: 'Aurora Aisle',
+    groupIds: ['1'],
+    priceTypeIds: ['1'],
+    salesRepresentativeIds: ['1'],
+  },
+  {
+    id: '10',
+    name: 'Harmony Haven',
+    groupIds: ['2', '3', '4'],
+    priceTypeIds: ['2', '3'],
+    salesRepresentativeIds: ['5', '4', '1'],
+  },
+  {
+    id: '11',
+    name: 'Phoenix Finds',
+    groupIds: ['5'],
+    priceTypeIds: ['2', '1'],
+    salesRepresentativeIds: ['3', '2', '5'],
+  },
+  {
+    id: '12',
+    name: 'Radiant Realms',
+    groupIds: ['3', '2'],
+    priceTypeIds: ['3'],
+    salesRepresentativeIds: ['2', '5'],
+  },
+  {
+    id: '13',
+    name: 'Dreamscape Depot',
+    groupIds: ['3'],
+    priceTypeIds: ['4', '3'],
+    salesRepresentativeIds: ['4'],
+  },
+  {
+    id: '14',
+    name: 'Elysian Essentials',
+    groupIds: ['1'],
+    priceTypeIds: ['1'],
+    salesRepresentativeIds: ['1'],
+  },
+  {
+    id: '15',
+    name: 'Celestial Cart',
+    groupIds: ['2'],
+    priceTypeIds: ['2'],
+    salesRepresentativeIds: ['2'],
+  },
+  {
+    id: '16',
+    name: 'Velvet Ventures',
+    groupIds: ['3'],
+    priceTypeIds: ['3'],
+    salesRepresentativeIds: ['3'],
+  },
+  {
+    id: '17',
+    name: 'Horizon Hub',
+    groupIds: ['4'],
+    priceTypeIds: ['4'],
+    salesRepresentativeIds: ['4'],
+  },
+  {
+    id: '18',
+    name: 'Luna Luxe',
+    groupIds: ['5'],
+    priceTypeIds: ['5'],
+    salesRepresentativeIds: ['5'],
+  },
+  {
+    id: '19',
+    name: 'Haven of Wonders',
+    groupIds: ['1'],
+    priceTypeIds: ['1'],
+    salesRepresentativeIds: ['1'],
   },
 ]

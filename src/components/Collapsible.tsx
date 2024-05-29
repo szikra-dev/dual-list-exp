@@ -1,31 +1,6 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 
-/**
- .collapsible {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
-
-.active, .collapsible:hover {
-  background-color: #ccc;
-}
-
-.content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #f1f1f1;
-}
- */
-
 const CollapsibleButton = styled.button`
   display: flex;
   align-items: center;
@@ -40,34 +15,39 @@ const CollapsibleButton = styled.button`
   outline: none;
   font-size: 15px;
 
+  border-bottom: 1px solid #ccc;
+
   &:hover {
     background-color: #ccc;
   }
 `
 
 const Content = styled.div`
-  padding: 0 10px;
+  padding: 8px 10px;
   display: none;
   overflow: hidden;
-  background-color: #f1f1f1;
+  background-color: #ffffff;
 `
 
-export function Collapsible() {
-  const [open, setOpen] = useState(false)
+type Props = {
+  title: string
+  children: React.ReactNode
+}
+
+export function Collapsible({ title = 'Collapsible', children }: Props) {
+  const [open, setOpen] = useState(true)
   return (
     <div>
       <CollapsibleButton onClick={() => setOpen((state) => !state)}>
-        <p>Category</p>
-        <span>+</span>
+        <p>{title}</p>
+        <span>{open ? ' - ' : ' + '}</span>
       </CollapsibleButton>
       <Content
         style={{
           display: open ? 'block' : 'none',
         }}
       >
-        <p>Option 1</p>
-        <p>Option 2</p>
-        <p>Option 3</p>
+        {children}
       </Content>
     </div>
   )
